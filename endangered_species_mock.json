@@ -1,0 +1,611 @@
+[
+  {
+    "_id": 1,
+    "name": "Tigre de Bengala",
+    "origin_continent": "Ásia",
+    "population": 2500,
+    "species": "Panthera tigris tigris",
+    "threats": [
+      "Caça furtiva",
+      "Perda de habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 2,
+    "name": "Orangotango de Sumatra",
+    "origin_continent": "Ásia",
+    "population": 14000,
+    "species": "Pongo abelii",
+    "threats": [
+      "Desmatamento",
+      "Expansão agrícola",
+      "Caça"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 3,
+    "name": "Leopardo-da-pérsia",
+    "origin_continent": "Ásia",
+    "population": 871,
+    "species": "Panthera pardus saxicolor",
+    "threats": [
+      "Caça furtiva",
+      "Desmatamento"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 4,
+    "name": "Rinoceronte-de-sumatra",
+    "origin_continent": "Ásia",
+    "population": 80,
+    "species": "Dicerorhinus sumatrensis",
+    "threats": [
+      "Caça furtiva",
+      "Perda de habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 5,
+    "name": "Pangolim",
+    "origin_continent": "África e Ásia",
+    "population": 200,
+    "species": "Manis sp.",
+    "threats": [
+      "Caça furtiva",
+      "Tráfico de animais"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 6,
+    "name": "Gorila ocidental",
+    "origin_continent": "África",
+    "population": 350,
+    "species": "Gorilla gorilla",
+    "threats": [
+      "Caça furtiva",
+      "Desmatamento"
+    ],
+    "status": "Em perigo crítico"
+  },
+  {
+    "_id": 7,
+    "name": "Leopardo-das-neves",
+    "origin_continent": "Ásia",
+    "population": 5000,
+    "species": "Panthera uncia",
+    "threats": [
+      "Caça furtiva",
+      "Perda de habitat"
+    ],
+    "status": "Em perigo"
+  },
+  {
+    "_id": 8,
+    "name": "Jaguar",
+    "origin_continent": "Americas",
+    "population": 15000,
+    "species": "Panthera onca",
+    "threats": [
+      "caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 9,
+    "name": "Orangotango-de-bornéu",
+    "origin_continent": "Asia",
+    "population": 1000,
+    "species": "Pongo pygmaeus",
+    "threats": [
+      "Desmatamento",
+      "caça furtiva"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 10,
+    "name": "Leão africano",
+    "origin_continent": "Africa",
+    "population": 20000,
+    "species": "Panthera leo",
+    "threats": [
+      "caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 11,
+    "name": "Lobo-guará",
+    "origin_continent": "Americas",
+    "population": 5000,
+    "species": "Chrysocyon brachyurus",
+    "threats": [
+      "Desmatamento",
+      "Atropelamentos"
+    ],
+    "status": "Em perigo"
+  },
+  {
+    "_id": 12,
+    "name": "Elefante-asiático",
+    "origin_continent": "Asia",
+    "population": 4000,
+    "species": "Elephas maximus",
+    "threats": [
+      "caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Em perigo"
+  },
+  {
+    "_id": 13,
+    "name": "Lémure-de-cauda-anelada",
+    "origin_continent": "Africa",
+    "population": 2000,
+    "species": "Lemur catta",
+    "threats": [
+      "Desmatamento",
+      "Criação de gado"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 14,
+    "name": "Rinoceronte-branco",
+    "origin_continent": "Africa",
+    "population": 18000,
+    "species": "Ceratotherium simum",
+    "threats": [
+      "caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 15,
+    "name": "Panda-gigante",
+    "origin_continent": "Ásia",
+    "population": 1864,
+    "species": "Ailuropoda melanoleuca",
+    "threats": [
+      "Perda de Habitat",
+      "Caça"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 16,
+    "name": "Rinoceronte-de-java",
+    "origin_continent": "Ásia",
+    "population": 72,
+    "species": "Rhinoceros sondaicus",
+    "threats": [
+      "Caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 17,
+    "name": "Tigre-de-bengala",
+    "origin_continent": "Ásia",
+    "population": 2500,
+    "species": "Panthera tigris tigris",
+    "threats": [
+      "Caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Ameaçado"
+  },
+  {
+    "_id": 18,
+    "name": "Morcego-dourado",
+    "origin_continent": "América do Sul",
+    "population": 2000,
+    "species": "Chiroderma villosum",
+    "threats": [
+      "Desmatamento",
+      "Caça"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 19,
+    "name": "Elefante-africano",
+    "origin_continent": "África",
+    "population": 415000,
+    "species": "Loxodonta africana",
+    "threats": [
+      "Caça",
+      "Perda de Habitat"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 20,
+    "name": "Leão-africano",
+    "origin_continent": "África",
+    "population": 25000,
+    "species": "Panthera leo",
+    "threats": [
+      "Caça",
+      "Perda de Habitat"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 21,
+    "name": "Lince-ibérico",
+    "origin_continent": "Europa",
+    "population": 600,
+    "species": "Lynx pardinus",
+    "threats": [
+      "Perda de Habitat",
+      "Doenças"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 22,
+    "name": "Tartaruga-de-couro",
+    "origin_continent": "América do Sul",
+    "population": 23000,
+    "species": "Dermochelys coriacea",
+    "threats": [
+      "Pesca acidental",
+      "Poluição"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 23,
+    "name": "Golfinho-rotador",
+    "origin_continent": "América do Norte",
+    "population": 1500,
+    "species": "Stenella longirostris",
+    "threats": [
+      "Pesca acidental",
+      "Poluição sonora"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 24,
+    "name": "Arara-azul-grande",
+    "origin_continent": "América do Sul",
+    "population": 3000,
+    "species": "Anodorhynchus hyacinthinus",
+    "threats": [
+      "Tráfico de animais",
+      "Perda de Habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 25,
+    "name": "Leopardo-de-amur",
+    "origin_continent": "Ásia",
+    "population": 84,
+    "species": "Panthera pardus orientalis",
+    "threats": [
+      "Caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 26,
+    "name": "Rinoceronte-negro",
+    "origin_continent": "África",
+    "population": 5500,
+    "species": "Diceros bicornis",
+    "threats": [
+      "Caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 27,
+    "name": "Onça-pintada",
+    "origin_continent": "América do Sul",
+    "population": 15000,
+    "species": "Panthera onca",
+    "threats": [
+      "Caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 28,
+    "name": "Elefante-africano",
+    "origin_continent": "África",
+    "population": 41500,
+    "species": "Loxodonta africana",
+    "threats": [
+      "Caça furtiva",
+      "Perda de Habitat"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 29,
+    "name": "Rinoceronte-de-Java",
+    "origin_continent": "Ásia",
+    "population": 68,
+    "species": "Rhinoceros sondaicus",
+    "threats": [
+      "caça furtiva",
+      "perda de habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 30,
+    "name": "Tartaruga-verde",
+    "origin_continent": "Global",
+    "population": 0,
+    "species": "Chelonia mydas",
+    "threats": [
+      "pesca incidental",
+      "degradação de habitats",
+      "alterações climáticas"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 31,
+    "name": "Tatu-bola",
+    "origin_continent": "América do Sul",
+    "population": 3500,
+    "species": "Tolypeutes tricinctus",
+    "threats": [
+      "perda de habitat",
+      "caça"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 32,
+    "name": "Tigre-siberiano",
+    "origin_continent": "Ásia",
+    "population": 500,
+    "species": "Panthera tigris altaica",
+    "threats": [
+      "caça furtiva",
+      "perda de habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 33,
+    "name": "Tubarão-martelo",
+    "origin_continent": "Global",
+    "population": 0,
+    "species": "Sphyrna spp.",
+    "threats": [
+      "pesca comercial",
+      "souvenirs",
+      "medicina tradicional"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 34,
+    "name": "Urso-polar",
+    "origin_continent": "Antártida",
+    "population": 31000,
+    "species": "Ursus maritimus",
+    "threats": [
+      "mudanças climáticas",
+      "exploração de petróleo",
+      "caça"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 35,
+    "name": "Urutau-verdadeiro",
+    "origin_continent": "América do Sul",
+    "population": 5000,
+    "species": "Nyctibius grandis",
+    "threats": [
+      "perda de habitat",
+      "atropelamentos"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 36,
+    "name": "Vaquita",
+    "origin_continent": "América Central",
+    "species": "Phocoena sinus",
+    "threats": [
+      "pesca com redes de emalhar",
+      "caça"
+    ]
+  },
+  {
+    "_id": 37,
+    "name": "Leão Asiático",
+    "origin_continent": "Ásia",
+    "population": 400,
+    "species": "Panthera leo persica",
+    "threats": [
+      "caça furtiva",
+      "perda de habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 38,
+    "name": "Golfinho de Hector",
+    "origin_continent": "Oceania",
+    "population": 1000,
+    "species": "Cephalorhynchus hectori",
+    "threats": [
+      "pesca acidental",
+      "poluição sonora"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 39,
+    "name": "Gorila Oriental",
+    "origin_continent": "África",
+    "population": 5000,
+    "species": "Gorilla beringei",
+    "threats": [
+      "caça furtiva",
+      "perda de habitat"
+    ],
+    "status": "Em perigo"
+  },
+  {
+    "_id": 40,
+    "name": "Panda Vermelho",
+    "origin_continent": "Ásia",
+    "population": 10000,
+    "species": "Ailurus fulgens",
+    "threats": [
+      "caça furtiva",
+      "perda de habitat"
+    ],
+    "status": "Vulnerável"
+  },
+  {
+    "_id": 41,
+    "name": "Foca-monge-do-havaí",
+    "origin_continent": "América do Norte",
+    "population": 1500,
+    "species": "Monachus schauinslandi",
+    "threats": [
+      "pesca incidental",
+      "perda de habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 42,
+    "name": "Morcego-nariz-de-folha-de-Kitti",
+    "origin_continent": "Ásia",
+    "population": 5000,
+    "species": "Craseonycteris thonglongyai",
+    "threats": [
+      "destruição de habitat",
+      "caça"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 43,
+    "name": "Sapo de Rabo de Leque",
+    "origin_continent": "América do Sul",
+    "population": 2500,
+    "species": "Atelopus cruciger",
+    "threats": [
+      "fungo quitrídio",
+      "perda de habitat"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 44,
+    "name": "Baleia-franca-do-atlântico-sul",
+    "origin_continent": "Atlântico Sul",
+    "population": 500,
+    "species": "Eubalaena australis",
+    "threats": [
+      "caça",
+      "embarcações",
+      "poluição sonora"
+    ],
+    "status": "Em perigo crítico"
+  },
+  {
+    "_id": 45,
+    "name": "Pinguim-de-magalhães",
+    "origin_continent": "América do Sul",
+    "population": 20000,
+    "species": "Spheniscus magellanicus",
+    "threats": [
+      "pesca excessiva",
+      "poluição",
+      "mudanças climáticas"
+    ],
+    "status": "Menos preocupante"
+  },
+  {
+    "_id": 46,
+    "name": "Baleia-jubarte",
+    "origin_continent": "Global",
+    "population": 80000,
+    "species": "Megaptera novaeangliae",
+    "threats": [
+      "caça",
+      "embarcações",
+      "poluição sonora"
+    ],
+    "status": "Menos preocupante"
+  },
+  {
+    "_id": 47,
+    "name": "Morcego-de-três-listras",
+    "origin_continent": "América do Sul",
+    "population": 8000,
+    "species": "Tonatia bidens",
+    "threats": [
+      "destruição do habitat",
+      "caça",
+      "doenças"
+    ],
+    "status": "Em perigo crítico"
+  },
+  {
+    "_id": 48,
+    "name": "Orangotango-de-bornéu",
+    "origin_continent": "Ásia",
+    "population": 500,
+    "species": "Pongo pygmaeus",
+    "threats": [
+      "desmatamento",
+      "caça",
+      "comércio ilegal"
+    ],
+    "status": "Criticamente em perigo"
+  },
+  {
+    "_id": 49,
+    "name": "Viúva-negra",
+    "origin_continent": "América do Norte",
+    "population": 60000,
+    "species": "Latrodectus",
+    "threats": [
+      "destruição do habitat",
+      "uso de pesticidas",
+      "mudanças climáticas"
+    ],
+    "status": "Menos preocupante"
+  },
+  {
+    "_id": 50,
+    "name": "Boto-cor-de-rosa",
+    "origin_continent": "América do Sul",
+    "population": 5000,
+    "species": "Inia geoffrensis",
+    "threats": [
+      "pesca excessiva",
+      "poluição",
+      "desmatamento"
+    ],
+    "status": "Em perigo"
+  }
+]
