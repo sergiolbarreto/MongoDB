@@ -1,8 +1,8 @@
-// CRIANDO O BD
+# CRIANDO O BD
 use Animals
 
-// Inserindo apenas um dado por vez, lembrando que isso é um exemplo, os dados
-// reais estão no arquivo endangered_animals_mock.json
+# Inserindo apenas um dado por vez, lembrando que isso é um exemplo, os dados
+# reais estão no arquivo endangered_animals_mock.json
 db.endangered_animals.insertOne( {
     "_id": 1,
     "name": "Tigre de Bengala",
@@ -16,8 +16,8 @@ db.endangered_animals.insertOne( {
     "status": "Criticamente em perigo"
   } )
 
-// Inserindo vários dados de uma vez, lembrando que isso é um exemplo, os dados
-// reais estão no arquivo endangered_animals_mock.json
+# Inserindo vários dados de uma vez, lembrando que isso é um exemplo, os dados
+# reais estão no arquivo endangered_animals_mock.json
 db.endangered_animals.insertMany([ {
     "_id": 2,
     "name": "Orangotango de Sumatra",
@@ -56,8 +56,8 @@ db.endangered_animals.insertMany([ {
     "status": "Criticamente em perigo"
   } ])
 
-// Update e Set
-// Atualizando apenas um dado
+# Update e Set
+# Atualizando apenas um dado
 
 db.endangered_animals.updateOne( {
 		name: "Leopardo-da-pérsia",
@@ -67,7 +67,7 @@ db.endangered_animals.updateOne( {
 )
 
 
-// Atualizando vários dados
+# Atualizando vários dados
 db.endangered_animals.updateMany( {
 		origin_continent: "Asia"
 	},
@@ -77,17 +77,17 @@ db.endangered_animals.updateMany( {
 )
 
 
-// Delete
+# Delete
 db.endangered_animals.deleteOne( { name: "Tigre-de-bengala" } )
 
 db.endangered_animals.deleteMany( { origin_continent: "América do Norte" } )
 
-// para deletar todos os registros
-// usar apenas se necessário:
+# para deletar todos os registros
+# usar apenas se necessário:
 db.endangered_animals.deleteMany({})
 
 
-// Find
+# Find
 db.endangered_animals.find()
 
 db.endangered_animals.find({ name: "Foca-monge-do-havaí" })
@@ -97,15 +97,15 @@ db.endangered_animals.find({ origin_continent: "África" }).limit(2)
 db.endangered_animals.find({ population: { $lte: 2000 } })
 
 
-// Limit
+# Limit
 db.endangered_animals.find().limit(5)
 
-// $Match
+# $Match
 db.endangered_animals.aggregate(
   [ { $match : { origin_continent : "Global" } } ]
 );
 
-//$Sort
+#$Sort
 db.endangered_animals.updateMany(
   { _id: 1},
   {
@@ -119,40 +119,40 @@ db.endangered_animals.updateMany(
 )
 
 
-// Max
+# Max
 db.endangered_animals.update(
 	{ name: "Pangolim" },
 	{ $max: { population: 600 } }
 )
 
 
-// não vai alterar o population, pois é menor
+# não vai alterar o population, pois é menor
 db.endangered_animals.update(
 	{ author: "Pangolim", population: 600 },
 	{ $max: { population: 300 } }
 )
 
 
-//Size & Count
+#Size & Count
 
-// SIZE -> OPERATOR
-// operando sobre array
+# SIZE -> OPERATOR
+# operando sobre array
 db.endangered_animals.find( { threats: { $size: 2 } } );
 
 
 
-// COUNT -> FUNCTION
+# COUNT -> FUNCTION
 db.endangered_animals.count()
-// ou
+# ou
 db.runCommand({count: 'endangered_animals'})
 
-// contagem dos animais em extinção com a população maior que 10000
+# contagem dos animais em extinção com a população maior que 10000
 db.runCommand( { count:'endangered_animals',
                  query: { population: { $gt: 10000 } }
                } )
 
 
-//AVG & Group
+#AVG & Group
 db.endangered_animals.aggregate(
 	[
 		{
@@ -165,7 +165,7 @@ db.endangered_animals.aggregate(
 	]
 )
 
-//$sum
+#$sum
 db.endangered_animals.aggregate(
   [
     {
@@ -179,11 +179,11 @@ db.endangered_animals.aggregate(
   ]
 )
 
-//$gte
+#$gte
 db.endangered_animals.find( { population: { $gte: 2000 } } )
 
 
-// mapReduce() & function()
+# mapReduce() & function()
 db.endangered_animals.mapReduce(
   function() { emit( this.origin_continent, this.population ); },
   function(key, values) { return Array.sum( values ) },
@@ -193,11 +193,11 @@ db.endangered_animals.mapReduce(
   }
 )
 
-// para visualizar o resultado
+# para visualizar o resultado
 db.total_populational_by_continent.find().pretty()
 
 
-// Aggregate()
+# Aggregate()
 db.endangered_animals.aggregate([
   { $match: { status: "Em perigo" } },
   { $group: { _id: "$origin_continent", total: { $sum: "$population" } } },
@@ -205,47 +205,47 @@ db.endangered_animals.aggregate([
 ])
 
 
-//$exists
+#$exists
 
-// Retorna todos os documentos com valores existentes no campo "population"
-//incluindo nulos
+# Retorna todos os documentos com valores existentes no campo "population"
+#incluindo nulos
 db.endangered_animals.find( { population: { $exists: true } } )
 
 
-// Retorna todos os documentos que não contêm o valor em "population", como
-// colocamos um documento sem o campo population, então rode:
+# Retorna todos os documentos que não contêm o valor em "population", como
+# colocamos um documento sem o campo population, então rode:
 db.endangered_animals.find( { population: { $exists: false } } )
 
 
-//$where
-// { $where: <string|JavaScript Code> }
+#$where
+# { $where: <string|JavaScript Code> }
 
-// Considere o animal “Leão africano” o regex abaixo corresponde a essa String:
+# Considere o animal “Leão africano” o regex abaixo corresponde a essa String:
 db.endangered_animals.find( { $where: function() {
   return (hex_md5(this.name) == "c646888cce132b8208d0526af900c322")
 } } );
 
 
-//pretty()
+#pretty()
 db.endangered_animals.find().pretty()
 
 
-//$all
+#$all
 { threats: { $all: ["Caça furtiva", "Perda de Habitat"] } }
 
-// Que é semelhante a
+# Que é semelhante a
 { $and: [ { threats: "Caça furtiva" }, { threats: "Perda de Habitat" } ] }
 
-// e a
+# e a
 { threats: ["Caça furtiva", "Perda de Habitat"] }
 
 
-// Consultas
+# Consultas
 db.endangered_animals.find({ threats: { $all: ["Caça furtiva", "Perda de Habitat"] } })
 db.endangered_animals.find({ threats: { $all: ["Desmatamento"] } })
 
 
-//$filter
+#$filter
 db.endangered_animals.updateOne( {
   name: "Viúva-negra",
   origin_continent: "América do Norte"
@@ -259,7 +259,7 @@ db.endangered_animals.updateOne( {
 }
 )
 
-//Agora temos um documento com o seguinte formato:
+#Agora temos um documento com o seguinte formato:
 {
 	"_id" : 49,
 	"name" : "Viúva-negra",
@@ -291,10 +291,10 @@ db.endangered_animals.updateOne( {
 	]
 }
 
-//Nesse momento podemos usar o $filter para obtermos os predadores com população maior que 40.000.000. 
-//O resultado será uma lista completa com todos documentos aqueles que não tem valor correspondente armazenam 
-//null caso tenha o campo mas não tenham dados correspondentes mostrará um array vazio e os que correspondem 
-//mostram apenas o livro com a avaliação requerida(array).
+#Nesse momento podemos usar o $filter para obtermos os predadores com população maior que 40.000.000. 
+#O resultado será uma lista completa com todos documentos aqueles que não tem valor correspondente armazenam 
+#null caso tenha o campo mas não tenham dados correspondentes mostrará um array vazio e os que correspondem 
+#mostram apenas o livro com a avaliação requerida(array).
 db.endangered_animals.aggregate([
   {
      $project: {
@@ -308,32 +308,32 @@ db.endangered_animals.aggregate([
      }
   }
 ])
-//Para visualizar o resultado vá escrevendo “it” e enter no terminal.
+#Para visualizar o resultado vá escrevendo “it” e enter no terminal.
 
 
-//$text & $search
+#$text & $search
 db.endangered_animals.createIndex({ name: "text" }, { language_override: "portuguese" })
 
 db.endangered_animals.find({ $text: { $search: "Gorila" } })
 
-//para encontrar com "Gorila", mas sem o "Ocidental"
+#para encontrar com "Gorila", mas sem o "Ocidental"
 db.endangered_animals.find( { $text: { $search: "Gorila -Ocidental" } } )
 
-// para encontrar vários
+# para encontrar vários
 db.endangered_animals.find( { $text: { $search: "Gorial Leão Pinguim" } } )
 
 
-//definir languagem
+#definir languagem
 db.endangered_animals.find( { $text: { $search: "Gorila", $language: "pt" } } )
 
 
-//findOne()
+#findOne()
 db.endangered_animals.findOne({ status: "Criticamente em perigo" })
 
 
-//$addToSet
+#$addToSet
 
-//Suponha que temos o seguinte documento:
+#Suponha que temos o seguinte documento:
 {
   "_id": 43,
   "name": "Sapo de Rabo de Leque",
@@ -347,13 +347,13 @@ db.endangered_animals.findOne({ status: "Criticamente em perigo" })
   "status": "Criticamente em perigo"
 }
 
-//Se executarmos agora:
+#Se executarmos agora:
 db.endangered_animals.updateOne(
   { _id: 43 },
   { $addToSet: { threats: "caça" } }
 )
 
-//Teremos
+#Teremos
 {
 	"_id" : 43,
 	"name" : "Sapo de Rabo de Leque",
@@ -368,13 +368,13 @@ db.endangered_animals.updateOne(
 	"status" : "Criticamente em perigo"
 }
 
-//ou use o operador $each para adicionar vários elementos ao Array
+#ou use o operador $each para adicionar vários elementos ao Array
 db.endangered_animals.updateOne(
   { _id: 43 },
   { $addToSet: { threats: { $each: [ "predadorismo", "caça"] } } }
 ).pretty()
 
-// saída
+# saída
 {
 	"_id" : 43,
 	"name" : "Sapo de Rabo de Leque",
@@ -390,7 +390,8 @@ db.endangered_animals.updateOne(
 	"status" : "Criticamente em perigo"
 }
 
-//Cond & Project
+# Cond & Project
+
 db.endangered_animals.aggregate([{
   $project:
   {
@@ -400,13 +401,12 @@ db.endangered_animals.aggregate([{
                         if: { $gte: ["$population", 5000] },
                         then: "Fora do risco alto",
                         else: "Dentro do risco alto"
-                      }
-            }
+    }
+  }
 }
 }]).pretty()
 
-
-//Lookup
+# Lookup
 db.animals_info.insertMany([
 	{
 		"animal_name": "Tigre de Bengala",
@@ -430,7 +430,7 @@ db.animals_info.insertMany([
 	},
 ])
 
-//Agora vamos ver o estágio em funcionamento:
+# Agora vamos ver o estágio em funcionamento:
 
 db.animals_info.aggregate( [
   {
@@ -444,13 +444,13 @@ db.animals_info.aggregate( [
  }
 ] ).pretty()
 
-//renameCollection()
+# renameCollection()
 db.endangered_animals.renameCollection('endangered')
 
-// Para voltar ao estado anterior
+# Para voltar ao estado anterior
 db.endangered.renameCollection('endangered_animals')
 
-// Save
+# Save
 db.endangered_animals.save({
   "_id": 51,
   "name": "Lobo-guará",
