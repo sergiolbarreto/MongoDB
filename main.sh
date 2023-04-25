@@ -372,7 +372,7 @@ db.endangered_animals.updateOne(
 db.endangered_animals.updateOne(
   { _id: 43 },
   { $addToSet: { threats: { $each: [ "predadorismo", "caça"] } } }
-).pretty()
+)
 
 # saída
 {
